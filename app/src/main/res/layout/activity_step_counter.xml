@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".StepCounter"
+    android:background="#F5F0CC"
+    android:padding="20dp"
+    >
+
+    <TextView
+        android:id="@+id/title_stepCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/tv_stepCounter"
+        android:layout_alignBaseline="@id/subtitle_stepCounter"
+        android:text="현재"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/tv_stepCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:paddingHorizontal="10dp"
+        android:text="0"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="70sp"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-medium" />
+
+    <TextView
+        android:id="@+id/subtitle_stepCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_stepCounter"
+        android:layout_alignBottom="@id/tv_stepCounter"
+        android:paddingBottom="12dp"
+        android:text="걸음"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="35sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="25dp"
+        android:layout_below="@id/graph_total"
+        android:layout_alignStart="@id/graph_total"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10000"
+        android:textSize="25dp"
+        android:layout_below="@id/graph_total"
+        android:layout_alignEnd="@id/graph_total"/>
+
+
+    <FrameLayout
+        android:id="@+id/graph_total"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/tv_stepCounter"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/holo_orange_light">
+
+        <View
+            android:id="@+id/graph_today_stepCounter"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_blue_light" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/graph_total"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp">
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/background_light"
+            android:text="재설정"
+            android:textSize="35sp"/>
+
+        <Button
+            android:id="@+id/btn_start_stop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="시작"
+            android:textSize="35sp"/>
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tv_record"
+            android:textSize="15sp"
+            android:background="@android:color/holo_green_light"/>
+
+    </FrameLayout>
+
+
+
+</RelativeLayout>
